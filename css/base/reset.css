@@ -1,0 +1,154 @@
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+a,
+address,
+big,
+em,
+img,
+small,
+strike,
+strong,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 16px;
+    font-family: "Poppins", "Noto Sans KR", sans-serif;
+    line-height: 150%;
+    letter-spacing: -0.5px;
+    vertical-align: baseline;
+    color: #2c2f30;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input,
+textarea,
+select {
+    border-radius: 0;
+}
+
+
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="file"] {
+    border: 0;
+    background: transparent;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: #2c2f30;
+}
+
+
+select,
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+.hidden {
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    z-index: -100;
+    overflow: hidden;
+}
+
+.background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+h2 {
+    margin-bottom: 40px;
+    font-size: 26px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
