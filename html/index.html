@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/base/bootstrap-grid.css">
     <link rel="stylesheet" href="../css/base/reset.css">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/index-responsive.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins:300,400,700&display=swap' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
     
@@ -22,9 +23,13 @@
     <div class="container">
       <div class="page-wrapper">
           <!-- ==== HEADER ==== -->
-          <div class="nav-btn"></div>
+          <div class="nav-btn" onclick="gnbMenuOn()">
+            <button class="nav-line">
+                <span class="line"></span>
+            </button>
+          </div>
           
-          <header>
+          <header id="header">
               <div class="nav-count">
                   <span class="now">01</span>
                   <span class="slash">/</span>
@@ -36,7 +41,7 @@
                       <ul>
                           <li><a href="#home">Home</a></li>
                           <li><a href="#about">About</a></li>
-                          <li><a href="#skills">Skills</a></li>
+                          <li><a href="#skill">Skills</a></li>
                           <li><a href="#portfolio">Portfolio</a></li>
                           <li><a href="#contact">Contact</a></li>
                       </ul>
@@ -62,12 +67,13 @@
                       <span>Kwon Yiseo</span>
                   </h1>
 
-                  <div class="my-photo">
+                  <div class="my-photo block-right">
                       <span class="hidden">사진</span>
                   </div>
 
                   <div class="scroll-down">
-                      <a href="#about">
+                      <a href="#about" class="background" 
+                      onclick="moveAboutContainer(event)">
                           <img src="" alt="">
                       </a>
                   </div>
@@ -84,7 +90,25 @@
             </div>
 
             <div class="about-text">
-                <div class="text-wrap">
+                <div class="info-wrap col-5">
+                    <ul>
+                        <li>
+                            <h3>email</h3>
+                            <p>yiseo1122@gmail.com</p>
+                        </li>
+                        <li>
+                            <h3>role</h3>
+                            <p>Web Publisher</p>
+                        </li>
+                        <li>
+                            <h3>address</h3>
+                            <p>서울시 금천구 시흥1동</p>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="text-wrap col-7">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -101,16 +125,191 @@
                       sint occaecat cupidatat non proident, 
                       sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
-                </div>
+                </div>               
+            </div>
 
-                <div class="info-wrap">
-                    <ul></ul>
-                </div>
+            <div class="text-wrap col-10">
+                <p>
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur.
+                </p>
+                <p>
+                    Excepteur
+                    sint occaecat cupidatat non proident,
+                    sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+
+            <div class="hash-tag">
+                <!-- <p>
+                    "성실함, 열정, 추진력"
+                </p> -->
             </div>
         </section>
         <!-- ==== ABOUT END ==== -->
+
+
+        <!-- ==== PORTFOLIO ==== -->
+        <section id="portfolio">
+            <h2>portfolio</h2>
+            <p class="portfolio-text">
+                지금까지 해왔던 실무 작업과 개인적으로 만들었던 작업물 리스트입니다.
+                해당 작업물을 클릭하시면 상세 내용을 볼 수 있습니다.
+            </p>
+
+            <div class="portfolio-box">
+                <div class="portfolio-list col-12">
+                    <div class="portfolio-hover">hover</div>
+                </div>
+                <div class="portfolio-list list-2 col-sm-6">
+                    <div class="portfolio-hover">hover</div>
+                </div>
+                <div class="portfolio-list col-sm-6">
+                    <div class="portfolio-hover">hover</div>
+                </div>
+                <div class="portfolio-list col-12">
+                    <div class="portfolio-hover">hover</div>
+                </div>
+            </div>
+        </section>
+        <!-- ==== PORTFOLIO END ==== -->
+
+        <!-- ==== SKILL ==== -->
+        <section id="skill">
+            <h2>skill</h2>
+            <div class="skill-text">
+                <p>
+                    배움에 있어 끝이 없다 생각하고, 꾸준히 역량을 늘려나가기 위해
+                    노력하고 있습니다.
+                </p>
+                <p>
+                    웹 표준 및 접근성을 고려하여 하드 코딩을 할 수 있고,
+                    UI 기능 구현과 플러그인을 활용하여 인터랙티브한 웹사이트를
+                    제작할 수 있습니다.
+                </p>
+            </div>
+            
+            <div class="skill-history block-right">
+                <ul>
+                    <li class="history-li">
+                        <div class="history-year">2018</div>
+                        <p class="history-text">
+                            그린컴퓨터아카데미 (수원)<br>
+                            스마트기기 UX/UI 과정
+                        </p>
+                    </li>
+                    <li class="history-li">
+                        <div class="history-year">2019</div>
+                        <p class="history-text">
+                            <b>2019.05 ~ </b><br>
+                            (주)카바조 개발팀 퍼블리셔로 근무<br>
+                            개발팀 유일한 퍼블리셔로, 자사 서비스 관련 사이트
+                            퍼블리싱을 혼자 담당함
+                        </p>
+                    </li>
+                    <li class="history-li">
+                        <div class="history-year">2020</div>
+                        <p class="history-text">
+                            한양사이버대학교 컴퓨터공학과 재학중<br>
+                            전문대 사회복지학과 졸업 후, 전문 지식을 쌓기 위해 사이버대 편입
+                        </p>
+                    </li>
+                    <li class="history-li">
+                        <div class="history-year">2020</div>
+                        <p class="history-text">
+                            흠 2학기 종강 후<br>
+                            학원을 다녀서... 여기 쓰는걸로
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="skill-progress">
+                <ul class="progress-box">
+                    <li class="progress-li">
+                        <span class="progress-name">HTML</span>
+                        <div class="progress-bar">
+                            <span class="skill-fill" data-fill="90%"></span>
+                        </div>
+                    </li>
+                    <li class="progress-li">
+                        <span class="progress-name">CSS</span>
+                        <div class="progress-bar">
+                            <span class="skill-fill" data-fill="85%"></span>
+                        </div>
+                    </li>
+                    <li class="progress-li">
+                        <span class="progress-name col-md-4">JAVASCRIPT</span>
+                        <div class="progress-bar col-md-8">
+                            <span class="skill-fill" data-fill="70%"></span>
+                        </div>
+                    </li>
+                    <li class="progress-li">
+                        <span class="progress-name">JQUERY</span>
+                        <div class="progress-bar">
+                            <span class="skill-fill" data-fill="80%"></span>
+                        </div>
+                    </li>
+                    <li class="progress-li">
+                        <span class="progress-name">GITHUB</span>
+                        <div class="progress-bar">
+                            <span class="skill-fill" data-fill="70%"></span>
+                        </div>
+                    </li>
+                    <li class="progress-li">
+                        <span class="progress-name">SASS</span>
+                        <div class="progress-bar">
+                            <span class="skill-fill"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- ==== SKILL END ==== -->
+
+        <!-- ==== CONTACT ==== -->
+        <section id="contact">
+            <h2>contact</h2>
+            <p class="contact-text">
+                지금까지 저의 포트폴리오를 봐주셔서 감사합니다.<br>
+                저에 대해 더 궁금하신 사항이 있으시면, 언제든지 문의주세요!
+                최대한 빠른 시간안에 답변 드리도록 하겠습니다.
+            </p>
+
+            <div class="contact-img block-right">
+                <!-- <img src="../img/contact_bg1.jpg" alt=""> -->
+            </div>
+
+            <div class="contact-form col-md-10">
+                <form action="">
+                    <div class="input-wrap">
+                        <input type="text" name="" placeholder="NAME" class="contact-name">
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text" name="" placeholder="phone" class="contact-phone">
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text" name="" placeholder="EMAIL" class="contact-email">
+                    </div>
+                    <div class="textarea-wrap">
+                        <textarea name="" class="contact-msg" placeholder="MESSAGE"></textarea>
+                    </div>
+                    <div class="submit-wrap">
+                        <input type="submit" value="SEND">
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- ==== CONTACT END ==== -->
       </div>
+      <!-- ==== page-wrapper END ==== -->
     </div>
   </div>
+
+
+  <!--=================== SCRIPT ===================-->
+  <script src="../js/index.js"></script>
 </body>
 </html>

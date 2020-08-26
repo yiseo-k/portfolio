@@ -1,0 +1,163 @@
+/* max-width:1200px */
+@media (max-width:1200px) {
+    .my-photo {
+        width: 470px;
+    }
+
+    .nav-btn {
+        display: block;
+    }
+
+    header {
+        left: -100%;
+        padding: 80px 20px 0 20px;
+        max-width: 300px;
+        transition: all 0.5s ease-out;
+        background: #fff;
+    }
+
+    .nav-count {
+        margin-bottom: 50px;
+    }
+}
+/* !max-width:1200px */
+
+
+/* max-width:1024px */
+@media (max-width:1024px){
+    body {
+        background: #edf6ff;
+    }
+
+    .page-wrapper {
+        margin: 0 auto;
+    }
+
+    .block-right {
+        margin-right: 0;
+    }
+
+    /* about */
+    .about-img {
+        width: 100%;
+    }
+    /* !about */
+}
+/* max-width:1024px */
+
+
+/* max-width:768px*/
+@media (max-width:768px){
+    /* home */
+    .content-wrap h1 {
+        font-size: 50px;
+    }
+
+    .my-photo {
+        max-width: 330px;
+        height: 500px;
+        min-height: auto;
+    }
+    /* !home */
+
+    /* about */
+    .about-img {
+        min-height: 230px;
+    }
+
+    .about-text {
+        display: block;
+    }
+
+    .info-wrap {
+        padding: 30px;
+        max-width: 100%;
+    }
+
+    .info-wrap li {
+        margin-bottom: 25px;
+    }
+
+    .text-wrap {
+        padding: 0;
+    }
+    /* !about */
+
+    /* portfolio */
+    #portfolio {
+        padding-top: 60px;
+    }
+
+    .portfolio-text {
+        font-size: 16px;
+    }
+    /* !portfolio */
+
+
+    /* skill */
+    .skill-history {
+        padding: 40px 25px;
+    }
+
+    .history-li {
+        margin-bottom: 40px;
+        display: block;
+    }
+
+    .history-li:last-child {
+        margin-bottom: 0;
+    }
+
+    .history-year {
+        width: 100%;
+        font-size: 40px;
+    }
+
+    .history-text {
+        padding: 0;
+        border-left: 0;
+        width: 100%;
+    }
+
+    .skill-progress {
+        padding-right: 0;
+    }
+
+    .progress-li {
+        width: 100%;
+    }
+    /* !skill */
+}
+/* !max-width:768px*/
+
+
+
+/* max-width: 480px */
+@media (max-width:480px) {
+    .scroll-down {
+        display: none;
+    }
+
+    .my-photo {
+        max-width: 80%;
+        max-height: 400px;
+    }
+
+    /* about */
+    .about-img {
+        min-height: 150px;
+    }
+    /* !about */
+
+    /* skill */
+    .progress-li {
+        display: block;
+    }
+    
+    .progress-name,
+    .progress-bar {
+        width: 100%;
+    }
+    /* !skill */
+}
+/* !max-width: 480px */

@@ -1,7 +1,6 @@
 html,
 body,
 div,
-span,
 h1,
 h2,
 h3,
@@ -16,9 +15,6 @@ big,
 em,
 img,
 small,
-strike,
-strong,
-b,
 u,
 i,
 center,
@@ -47,17 +43,17 @@ figure,
 figcaption,
 footer,
 header,
-hgroup,
-menu,
 nav,
 section,
-audio,
 video {
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 16px;
+    font-weight: normal;
     font-family: "Poppins", "Noto Sans KR", sans-serif;
+    font-style: normal;
+    font-stretch: normal;
     line-height: 150%;
     letter-spacing: -0.5px;
     vertical-align: baseline;
@@ -95,16 +91,54 @@ select {
     border-radius: 0;
 }
 
+button:focus, 
+input:focus {
+    outline: none;
+}
 
 button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"],
+input[type="text"],
 input[type="file"] {
+    padding: 0;
+    margin: 0;
     border: 0;
     background: transparent;
     border-radius: 0;
+    font-size: 16px;
+    font-family: "Poppins", "Noto Sans KR", sans-serif;
     cursor: pointer;
+}
+
+textarea {
+    outline: none;
+    resize: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    font-family: "Poppins", "Noto Sans KR", sans-serif;
+    font-size: 16px;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+input::-webkit-input-placeholder,
+input:-ms-input-placeholder,
+input:-moz-input-placeholder,
+input::placeholder {
+    font-weight: 300;
+    color: #6c6f70;
+}
+
+textarea::-webkit-input-placeholder,
+textarea:-ms-input-placeholder,
+textarea:-moz-input-placeholder,
+textarea::placeholder {
+    font-weight: 300;
+    color: #6c6f70;
 }
 
 a {
@@ -151,4 +185,8 @@ h2 {
     letter-spacing: 5px;
     text-transform: uppercase;
     font-weight: normal;
+}
+
+p {
+    word-break: keep-all;
 }
